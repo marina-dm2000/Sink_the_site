@@ -1,31 +1,72 @@
 package Game;
 
-import java.io.BufferedReader;
 import java.io.IOException;
-import java.io.InputStreamReader;
+import java.util.ArrayList;
 
 public class Game {
+    private int comCount = 0;
+    private final int gridSize = 49;
+    private final int[] grid = new int[gridSize];
+    private static final String alphabet = "abcdefg";
+
     public static void main(String[] args) throws IOException {
-        BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
-        int numOfGuesses = 0;
-        DotCom dotCom = new DotCom();
-        int randomNum = (int) (Math.random() * 5);
-        int[] locations = {randomNum, randomNum + 1, randomNum + 2};
-        dotCom.setLocationCells(locations);
-        boolean isAlive = true;
+        DotComBust game = new DotComBust();
+        game.setUpGame();
+        game.startPlaying();
+    }
 
-        while (isAlive) {
-            System.out.print("Введите число: ");
+    public ArrayList<String> placeDotCom(int comSize) {
+        ArrayList<String> alphaCell = new ArrayList<>();
+        String temp; //временная строка для конкатенации
+        int[] coords = new int[comSize]; //координаты текущего "сайта"
+        int attempts = 0; //счетчик текущих попыток
+        boolean success = false; //нашли подходящее местоположение?
+        int location; //текущее начальное положение
 
-            String guess = reader.readLine();
-            String result = dotCom.checkYourself(guess);
+        comCount++;
+        int incr = 1;
+        int gridLength = 7;
+        if (comCount % 2 == 1) {
+            incr = gridLength;
+        }
 
-            numOfGuesses++;
+        while (!success & attempts++ < 200) {
+            location = (int) (Math.random() * gridSize);
+            int x = 0;
+            success = true;
 
-            if (result.equals("Потопил")) {
-                isAlive = false;
-                System.out.printf("Вам потребовалось %d попыток(и)", numOfGuesses);
+            while (success && x < comSize) {
+                if (grid[location] == 0) {
+                    coords[x++] = location;
+                    location += incr;
+
+                    if (location >= gridSize) {
+                        success = false;
+                    }
+
+                    if (location % gridLength == 0) {
+                        success = false;
+                    }
+                } else {
+                    success = false;
+                }
             }
         }
+
+        int x = 0;
+        int row;
+        int column;
+
+        while (x < comSize) {
+            grid[coords[x]] = 1;
+            row = coords[x] / gridLength;
+            column = coords[x] % gridLength;
+            temp = String.valueOf(alphabet.charAt(column));
+
+            alphaCell.add(temp.concat(Integer.toString(row)));
+            x++;
+        }
+
+        return alphaCell;
     }
 }

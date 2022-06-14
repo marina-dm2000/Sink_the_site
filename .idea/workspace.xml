@@ -4,11 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c68d7e53-6c47-406a-b891-ab629798a585" name="Changes" comment="Создание проекта">
-      <change afterPath="$PROJECT_DIR$/src/Game/DotCom.java" afterDir="false" />
+    <list default="true" id="c68d7e53-6c47-406a-b891-ab629798a585" name="Changes" comment="Упрощенная версия. Работает неверно, если указать 3 раза одну и ту же ячейку, в которую попали">
+      <change afterPath="$PROJECT_DIR$/src/Game/DotComBust.java" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/src/Game/DotComTestDrive.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Game/Game.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Game/DotCom.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Game/DotCom.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Game/Game.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Game/Game.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -41,7 +42,8 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true"
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "last_opened_file_path": "C:/Users/Марина/IdeaProjects/Sink the site"
   }
 }]]></component>
   <component name="RunManager" selected="Application.Game">
@@ -94,7 +96,14 @@
       <option name="project" value="LOCAL" />
       <updated>1655129666318</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Упрощенная версия. Работает неверно, если указать 3 раза одну и ту же ячейку, в которую попали">
+      <created>1655133250548</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1655133250548</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -110,17 +119,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Создание проекта" />
-    <option name="LAST_COMMIT_MESSAGE" value="Создание проекта" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/Game/Game.java</url>
-          <line>10</line>
-          <option name="timeStamp" value="2" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
+    <MESSAGE value="Упрощенная версия. Работает неверно, если указать 3 раза одну и ту же ячейку, в которую попали" />
+    <option name="LAST_COMMIT_MESSAGE" value="Упрощенная версия. Работает неверно, если указать 3 раза одну и ту же ячейку, в которую попали" />
   </component>
 </project>
