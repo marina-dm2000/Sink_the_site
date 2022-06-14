@@ -1,0 +1,23 @@
+Index: src/Game/DotComTestDrive.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/Game/DotComTestDrive.java b/src/Game/DotComTestDrive.java
+new file mode 100644
+--- /dev/null	(date 1655132554991)
++++ b/src/Game/DotComTestDrive.java	(date 1655132554991)
+@@ -0,0 +1,13 @@
++package Game;
++
++public class DotComTestDrive {
++    /*public static void main(String[] args) {
++        DotCom dot = new DotCom();
++
++        int[] locations = {2, 3, 4};
++        dot.setLocationCells(locations);
++
++        String userGuess = "2";
++        String result = dot.checkYourself(userGuess);
++    }*/
++}
